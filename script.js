@@ -27,10 +27,10 @@ function drawFrame(){
     ctx.closePath();
 
     if(cPosX + cRadius >= cWidth || cPosX - cRadius <= 0) {
-        cVelX = cVelX * -1; //reverse the horizontal direction
+        cVelX = cVelX * -1.0; //reverse the horizontal direction
     }
     if(cPosY + cRadius >= cHeight || cPosY - cRadius <= 0){
-        cVelY = cVelY * -1;
+        cVelY = cVelY * -1.0;
     }
 
     cPosX = cPosX + cVelX; // change position by velocity
@@ -51,8 +51,8 @@ canvas2.addEventListener("click", function(event){
     if(distX < cRadius && distY < cRadius){
         count++;
         disp.innerHTML = count;
-        cVelX = cVelX * 1.5;
-        cVelY = cVelY * 1.5;
+        cVelX = cVelX * 1.0001;//1.5
+        cVelY = cVelY * 1.0001;//1.5
         setBg();
         const ballColor = Math.floor(Math.random()*16777215).toString(16);
         ctx.beginPath();
