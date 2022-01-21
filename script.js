@@ -51,8 +51,8 @@ canvas2.addEventListener("click", function(event){
     if(distX < cRadius && distY < cRadius){
         count++;
         disp.innerHTML = count;
-        cVelX = cVelX * 1.0001;//1.5
-        cVelY = cVelY * 1.0001;//1.5
+        cVelX = cVelX * 1.001;//1.5
+        cVelY = cVelY * 1.001;//1.5
         setBg();
         const ballColor = Math.floor(Math.random()*16777215).toString(16);
         ctx.beginPath();
